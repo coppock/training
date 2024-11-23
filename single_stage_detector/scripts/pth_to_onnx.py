@@ -69,7 +69,7 @@ def main(args):
     if (args.batch_size is None) or (args.image_size is None):
         dynamic_axes['images'] = {}
         if args.batch_size is None:
-            dynamic_axes['images'][0]: 'batch_size'
+            dynamic_axes['images'][0] = 'batch_size'
         if args.image_size is None:
             dynamic_axes['images'][2] = 'width'
             dynamic_axes['images'][3] = 'height'
